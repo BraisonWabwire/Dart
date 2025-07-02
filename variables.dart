@@ -1,14 +1,25 @@
-// Map
+// Learning classes
 void main(){
-  Map<String,String> planets={
-    "name":"Braison",
-    "email":"braisonwabwire2003@gmail.com",
-    "nationality":"",
-    };
-  print(planets["name"]);
-  print(planets.containsKey("name"));
-  print(planets.containsKey("namde"));
-  print(planets.remove("nationality"));
-  print(planets);
+   
+   var noodles=MenuItem("idomie", 40.45);
+   var noodless=Pizza(["camdel","shbueb"], "vegVolacano", 19.5);
+   print(noodless.toppings);
+}
+class MenuItem{
+  String title;
+  double price;
+  double tax=0.23;
   
+  MenuItem(this.title, this.price);
+  double get finalPrice=>price*tax;
+
+  String format(){
+    return "$title,$price,$finalPrice";
+  }
+}
+
+class Pizza extends MenuItem{
+  List<String> toppings;
+
+  Pizza(this.toppings, super.title,super.price);
 }
