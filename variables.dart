@@ -1,9 +1,13 @@
 // Learning classes
 void main(){
    
-   var noodles=MenuItem("idomie", 40.45);
-   var noodless=Pizza(["camdel","shbueb"], "vegVolacano", 19.5);
-   print(noodless.format());
+   
+  //  var noodless=Pizza(["camdel","shbueb"], "vegVolacano", 19.5);
+  //  print(noodless.format());
+
+   var food=collection("Skuma wiki", [1,3,5,"hello",1,4,5,6]);
+   var random=food.randomItem();
+   print(random);
 }
 class MenuItem{
   String title;
@@ -35,3 +39,15 @@ class Pizza extends MenuItem{
   }
 }
 
+class collection{
+  String name;
+  List data;
+
+  collection(this.name,this.data);
+
+  randomItem(){
+    data.shuffle();
+    return data[0];
+  }
+
+}
