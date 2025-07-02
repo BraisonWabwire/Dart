@@ -1,15 +1,14 @@
-// Control flow
+// Map
 void main(){
-  List<int> scores=[12,89,73,28,12,43,43,12];
-
-  for(int i=0;i<5;i++){
-    print('The current value of i is ${scores[i]}');
-  }
-
-  for (int score in scores){
-    if (score>50){
-    print(score);
-
-    }
-  }
+  Map<String,String> planets={
+    "name":"Braison",
+    "email":"braisonwabwire2003@gmail.com",
+    "nationality":"",
+    };
+  print(planets["name"]);
+  print(planets.containsKey("name"));
+  print(planets.containsKey("namde"));
+  print(planets.remove("nationality"));
+  print(planets);
+  
 }
