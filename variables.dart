@@ -1,11 +1,15 @@
 void main(){
-  var name="Braison";
-  print(name);
-  final age=25;
+  int? age;
   print(age);
-  const isOpen=true;
-  // isOpne= false;
-  print(isOpen);
-  print("my name is $name i am ${age+10}, it is $isOpen i am a male");
+
+  const int MyAge=20;
+  print(MyAge);
+
+  const String Name="Braison";
+  // Name="James";
+  print(Name);
+
+  final double rating=7.9;
+  print(rating);
 
 }
