@@ -11,6 +11,15 @@ void main(){
   print(grades);
   grades.remove(22);
   grades.remove(22);
+  print(grades.length);
+  grades.shuffle();
   print(grades);
+
+
+// Sets
+Set<String> names={'Braison','Wabwire','Daniel'};
+names.add("james");
+print(names);
+print(names.length);
 
 }
