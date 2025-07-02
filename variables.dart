@@ -5,4 +5,11 @@ void main(){
   for(int i=0;i<5;i++){
     print('The current value of i is ${scores[i]}');
   }
+
+  for (int score in scores){
+    if (score>50){
+    print(score);
+
+    }
+  }
 }
