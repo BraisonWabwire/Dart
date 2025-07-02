@@ -3,7 +3,7 @@ void main(){
    
    var noodles=MenuItem("idomie", 40.45);
    var noodless=Pizza(["camdel","shbueb"], "vegVolacano", 19.5);
-   print(noodless.toppings);
+   print(noodless.format());
 }
 class MenuItem{
   String title;
@@ -14,7 +14,7 @@ class MenuItem{
   double get finalPrice=>price*tax;
 
   String format(){
-    return "$title,$price,$finalPrice";
+    return "$title,---->$price,---->$finalPrice";
   }
 }
 
@@ -22,4 +22,16 @@ class Pizza extends MenuItem{
   List<String> toppings;
 
   Pizza(this.toppings, super.title,super.price);
+
+  @override
+  String format(){
+    var formatToppings = "contains:";
+    
+    for (final t in toppings){
+      formatToppings='$formatToppings $t';
+    }
+    return '$title->$price \n$formatToppings';
+
+  }
 }
+
