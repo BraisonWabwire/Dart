@@ -1,8 +1,8 @@
 // Functions in Dart
 void main(){
-  final greetings= greet(10, true);
+  final greetings= greet("Braison", 21);
   print(greetings);
 }
-greet(name,age){
+greet(String name, int age){
   return "hi i am $name, $age years old";
 }
