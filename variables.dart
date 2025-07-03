@@ -1,10 +1,9 @@
 // Asyc, await, future
 
-void main(){
-  fetchPost().then((p){
-    print(p.title);
-    print(p.UserId);
-  });
+void main() async{
+  final post=await fetchPost();
+  print(post.title);
+  print(post.UserId);
 
 }
 Future<Post> fetchPost(){
