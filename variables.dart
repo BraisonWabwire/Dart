@@ -5,7 +5,7 @@ void main(){
   //  var noodless=Pizza(["camdel","shbueb"], "vegVolacano", 19.5);
   //  print(noodless.format());
 
-   var food=collection("Skuma wiki", [1,3,5,"hello",1,4,5,6]);
+   var food=collection<MenuItem>("Skuma wiki", ["hello","hi","yoh"]);
    var random=food.randomItem();
    print(random);
 }
@@ -17,7 +17,7 @@ class MenuItem{
   MenuItem(this.title, this.price);
   double get finalPrice=>price*tax;
 
-  String format(){
+  format(){
     return "$title,---->$price,---->$finalPrice";
   }
 }
@@ -39,13 +39,13 @@ class Pizza extends MenuItem{
   }
 }
 
-class collection{
+class collection<T>{
   String name;
-  List data;
+  List<T> data;
 
   collection(this.name,this.data);
 
-  randomItem(){
+ T randomItem(){
     data.shuffle();
     return data[0];
   }
